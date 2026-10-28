@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "{{ site.url }}/#profile",
+  "url": {{ site.url | append: '/' | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "dateModified": {{ site.data.profile.updated | append: 'T00:00:00+00:00' | jsonify }},
+  "inLanguage": {{ site.lang | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#alex-roan",
+    "name": {{ site.data.profile.name | jsonify }},
+    "alternateName": {{ site.data.profile.handle | jsonify }},
+    "url": {{ site.url | append: '/' | jsonify }},
+    "image": {{ '/assets/portrait.jpeg' | absolute_url | jsonify }},
+    "description": {{ site.data.profile.bio | markdownify | strip_html | strip | jsonify }},
+    "jobTitle": {{ site.data.profile.role | jsonify }},
+    "worksFor": { "@type": "Organization", "name": "Cyfrin", "url": "https://www.cyfrin.io/" },
+    "knowsAbout": {{ site.data.profile.topics | jsonify }},
+    "sameAs": [{% for social in site.data.profile.socials %}{{ social.url | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+  }
+}

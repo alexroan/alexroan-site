@@ -1,0 +1,71 @@
+name: Alex Roan
+handle: alexroan
+role: co-founder and CTO
+company: Cyfrin
+location: UK
+updated: '2026-10-28'
+bio: Hey there, I’m **Alex**.
+about:
+  - >-
+    I’m **Co-founder and CTO** of **[Cyfrin](https://www.cyfrin.io/)**, currently focused on building **[Cyfrin’s Risk team](https://www.cyfrin.io/services/risk)** and **expanding Cyfrin’s suite of professional services** to help institutions bring their customers and assets onchain safely and responsibly.
+  - >-
+    My motivation and work center around **earning legitimacy** for the industry. I wrote about this in *[The Cyfrin Mission](https://medium.com/cyfrin/the-cyfrin-mission-50331b318e67)* in 2023. This primarily involves growing teams of talented experts, building useful things, and advising on security, economic, technical, and counterparty risks so people and institutions can make informed decisions.
+hats:
+  - >-
+    **Build teams and services.** I built, managed, and grew Cyfrin’s security team and security audit service. It is now considered one of the few tier 1 security audit firms in the industry.
+  - >-
+    **Build products and security tools.** I lead product and engineering direction for Cyfrin’s product suite, including [Updraft](https://updraft.cyfrin.io/courses), [CodeHawks](https://codehawks.cyfrin.io/contests), [Solodit](https://solodit.cyfrin.io/), [Aderyn](https://github.com/cyfrin/aderyn), and [safe-hash-rs](https://github.com/Cyfrin/safe-hash-rs), among others.
+  - >-
+    **Protocol engineering.** At [Chainlink](https://chain.link/), I led smart-contract development across the core Operator contract logic, Price Feed Aggregators, Keepers, VRF, OCR3, Chainlink Staking, and CCIP. I also led specific client protocol integrations, including [Compound’s move to Chainlink Price Feeds](https://github.com/smartcontractkit/open-oracle/pull/1), and later [GMX automation](https://github.com/Cyfrin/chainlink-gmx-automation).
+  - >-
+    **System design.** I led the design of the request-for-quote (RFQ) system, built the onchain components for [Atum Labs’](https://atum.xyz/) stablecoin payment system, and I actively experiment with systems that behave in ways traditional institutions can understand while preserving the unique properties blockchains provide.
+questions:
+  - question: We’re bringing customers or a product onchain. Where can you help?
+    answer: >-
+      I can help you understand the risks in what you’re building, from protocol and asset choices to the contracts and dependencies behind them. That includes architecture, security, and economic, technical, counterparty, and compliance risk: what can fail, who has control, and what those decisions mean for your customers. This is the focus of [our risk work at Cyfrin](https://www.cyfrin.io/services/risk).
+  - question: Can you help with protocol or smart-contract design?
+    answer: >-
+      Yes. I’ve worked on oracle integrations, automation, cross-chain systems, intents, RFQs, access control, multisig operations, stablecoin payments, and more. I can help design the system, work through its trust assumptions and failure modes, and take it through implementation, security review, and risk advisory.
+  - question: What about audits and security tooling?
+    answer: >-
+      I can help scope a security review and connect you with our industry-leading security experts at [Cyfrin](https://www.cyfrin.io/). If you’re building smart contracts, operating an onchain protocol, handling multisig signing workflows, or building tools to interact with blockchains, I’m happy to talk through what you need.
+topics:
+  - Onchain risk
+  - Economic risk
+  - Counterparty risk
+  - Compliance risk
+  - Institutional onchain finance
+  - Stablecoin payments
+  - Request-for-quote systems
+  - Smart contract security
+  - Protocol engineering
+  - Solidity
+  - Rust
+  - Oracle integrations
+  - Static analysis
+  - Cross-chain interoperability
+  - Foundry
+socials:
+  - name: GitHub
+    url: https://github.com/alexroan
+  - name: X
+    url: https://x.com/alexroan
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/alex-roan-b746922a/
+contact:
+  label: alex@cyfrin.io
+  url: mailto:alex@cyfrin.io
+  prompt: Let me know what you’re building and where you’d like help.
+projects:
+  - name: mandate-protocol
+    url: https://github.com/alexroan/mandate-protocol
+    description: An experimental direct-debit protocol for ERC-20 tokens, with agreed recurring payment schedules, onchain enforcement, and cancellation by either party.
+  - name: vanity
+    url: https://github.com/alexroan/vanity
+    description: A Rust CLI that searches for CREATE2 deployment salts from Foundry contract artifacts. GPU mining via Metal, Vulkan, or DX12, with automatic Rayon CPU fallback.
+  - name: chuff
+    url: https://github.com/alexroan/chuff
+    description: Ownable and checked-arithmetic patterns implemented in Huff, with Foundry tests comparing gas costs against Solidity implementations.
+  - name: zk-playground
+    url: https://github.com/alexroan/zk-playground
+    description: Circom and Noir circuit examples, including arithmetic constraints, voting, and integrating proofs with Ethereum contracts.

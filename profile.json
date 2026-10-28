@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /profile.json
+---
+{% include profile-schema.json %}

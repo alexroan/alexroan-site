@@ -1,0 +1,23 @@
+title: Alex Roan
+description: Alex Roan, Cyfrin co-founder and CTO. Building the Risk team and helping institutions build onchain; protocol engineering and security tooling. UK.
+url: https://alexroan.co.uk
+baseurl: ""
+lang: en-GB
+timezone: Europe/London
+encoding: utf-8
+markdown: kramdown
+strict_front_matter: true
+liquid:
+  error_mode: strict
+  strict_filters: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs
+  - scripts
+  - vendor
+  - tmp
+  - SECURITY.md
+  - "*.pdf"
+  - ".env*"

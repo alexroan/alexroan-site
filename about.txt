@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /about.md
+---
+# {{ site.data.profile.name }}
+
+## Who am I?
+
+{{ site.data.profile.bio | markdownify | strip_html | strip }}
+{% for paragraph in site.data.profile.about %}
+{{ paragraph }}
+{% endfor %}
+## What I do
+{% for hat in site.data.profile.hats %}
+- {{ hat }}{% endfor %}
+
+## How I can help
+{% for item in site.data.profile.questions %}
+### {{ item.question }}
+
+{{ item.answer }}
+{% endfor %}
+### How should I get in touch?
+
+Email me at [{{ site.data.profile.contact.label }}]({{ site.data.profile.contact.url }}), or send me a DM on [X (@alexroan)](https://x.com/alexroan) or {% for social in site.data.profile.socials %}{% if social.name == 'LinkedIn' %}[LinkedIn]({{ social.url }}){% endif %}{% endfor %}. {{ site.data.profile.contact.prompt }}
+
+## More code & experiments
+{% for project in site.data.profile.projects %}
+- [{{ project.name }}]({{ project.url }}): {{ project.description }}{% endfor %}
+
+## Public profiles
+{% for social in site.data.profile.socials %}
+- [{{ social.name }}]({{ social.url }}){% endfor %}
+
+Canonical profile: {{ site.url }}/
+Updated: {{ site.data.profile.updated }}

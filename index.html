@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign profile = site.data.profile %}
+<section class="section about" aria-labelledby="about-heading">
+  <h2 id="about-heading">Who am I?</h2>
+  {{ profile.bio | markdownify }}
+  {% for paragraph in profile.about %}{{ paragraph | markdownify }}{% endfor %}
+</section>
+
+<section class="section" id="what-i-do" aria-labelledby="what-i-do-heading">
+  <h2 id="what-i-do-heading">What I do</h2>
+  <ul class="hats-list">
+    {% for hat in profile.hats %}<li>{{ hat | markdownify }}</li>{% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="help" aria-labelledby="help-heading">
+  <h2 id="help-heading">How I can help</h2>
+  {% for item in profile.questions %}
+  <section class="question" aria-labelledby="question-{{ forloop.index }}">
+    <h3 id="question-{{ forloop.index }}">{{ item.question | escape }}</h3>
+    {{ item.answer | markdownify }}
+  </section>
+  {% endfor %}
+  <section class="question" id="contact" aria-labelledby="contact-heading">
+    <h3 id="contact-heading">How should I get in touch?</h3>
+    <p>Email me at <a href="{{ profile.contact.url | escape }}">{{ profile.contact.label | escape }}</a>, or send me a DM on <a href="https://x.com/alexroan">X (@alexroan)</a> or {% for social in profile.socials %}{% if social.name == 'LinkedIn' %}<a href="{{ social.url | escape }}">LinkedIn</a>{% endif %}{% endfor %}. {{ profile.contact.prompt | escape }}</p>
+  </section>
+</section>
+
+<section class="section" id="work" aria-labelledby="work-heading">
+  <h2 id="work-heading">More code &amp; experiments</h2>
+  <ul class="project-list">
+    {% for project in profile.projects %}
+    <li><a href="{{ project.url | escape }}">{{ project.name | escape }}</a> — {{ project.description | escape }}</li>
+    {% endfor %}
+  </ul>
+</section>

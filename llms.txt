@@ -1,0 +1,28 @@
+---
+layout: null
+---
+# Alex Roan
+
+> {{ site.description }}
+
+## Profile
+
+- [Full profile in Markdown]({{ site.url }}/about.md): Current Cyfrin work, background, ways to work together, code and contact details.
+- [Website]({{ site.url }}/): The canonical personal profile.
+- [Structured profile]({{ site.url }}/profile.json): Schema.org ProfilePage and Person data.
+
+## Writing
+
+- [The Cyfrin Mission](https://medium.com/cyfrin/the-cyfrin-mission-50331b318e67): Alex’s 2023 article on earning legitimacy for the industry.
+
+## Code & experiments
+{% for project in site.data.profile.projects %}
+- [{{ project.name }}]({{ project.url }}): {{ project.description }}{% endfor %}
+
+## Contact
+
+- [Email]({{ site.data.profile.contact.url }}): {{ site.data.profile.contact.label }}. Direct messages on X or LinkedIn are also welcome.
+
+## Public profiles
+{% for social in site.data.profile.socials %}
+- [{{ social.name }}]({{ social.url }}){% endfor %}

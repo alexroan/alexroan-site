@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <script src="{{ '/assets/theme.js' | relative_url }}"></script>
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }} — Cyfrin co-founder &amp; CTO</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="author" content="{{ site.data.profile.name | escape }}">
+  {% if page.noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="alternate" type="application/ld+json" href="{{ '/profile.json' | relative_url }}" title="Alex Roan — structured profile">
+  <link rel="alternate" type="text/markdown" href="{{ '/about.md' | relative_url }}" title="Alex Roan — plain-text profile">
+  <link rel="describedby" type="text/plain" href="{{ '/llms.txt' | relative_url }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Alex Roan">
+  <meta property="og:title" content="{{ site.title | escape }} — Cyfrin co-founder &amp; CTO">
+  <meta property="og:description" content="{{ site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/social-card.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alex Roan — Cyfrin co-founder and CTO, UK. Building the Risk team and helping institutions build onchain. Protocol engineering and security tooling.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@alexroan">
+  <meta name="twitter:creator" content="@alexroan">
+  {% unless page.noindex %}<script type="application/ld+json">{% include profile-schema.json %}</script>{% endunless %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="identity">
+        <img class="portrait" src="{{ '/assets/portrait.jpeg' | relative_url }}" width="52" height="52" alt="Alex Roan">
+        <div class="identity-text">
+          {% if page.noindex %}<p class="site-name">{% else %}<h1 class="site-name">{% endif %}<a href="{{ '/' | relative_url }}" target="_blank" rel="noopener noreferrer">Alex Roan</a>{% if page.noindex %}</p>{% else %}</h1>{% endif %}
+          <span class="domain">alexroan.co.uk</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <nav aria-label="Contact and public profiles">
+          <a href="{{ site.data.profile.contact.url | escape }}" target="_blank" rel="noopener noreferrer">Email</a>
+          {% for social in site.data.profile.socials %}<a href="{{ social.url | escape }}" target="_blank" rel="me noopener noreferrer">{{ social.name | escape }}</a>{% endfor %}
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode</button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">{{ content | replace: '<a href=', '<a target="_blank" rel="noopener noreferrer" href=' }}</main>
+    <footer class="site-footer">
+      <span>Alex Roan · {{ site.data.profile.location | escape }}</span>
+      <div><a href="{{ '/about.md' | relative_url }}" target="_blank" rel="noopener noreferrer">Plain text</a><span aria-hidden="true"> / </span><a href="{{ '/profile.json' | relative_url }}" target="_blank" rel="noopener noreferrer">JSON</a><span aria-hidden="true"> / </span><a href="{{ '/llms.txt' | relative_url }}" target="_blank" rel="noopener noreferrer">llms.txt</a></div>
+    </footer>
+  </div>
+</body>
+</html>

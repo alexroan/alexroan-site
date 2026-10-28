@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --paper: #fff;
+  --ink: #202b35;
+  --muted: #586672;
+  --line: #dce2e7;
+  --link: #1554a0;
+  --selection: #dfebf7;
+  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111820;
+  --ink: #e7edf2;
+  --muted: #a9b8c6;
+  --line: #3b4a58;
+  --link: #8dc0ff;
+  --selection: #294560;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 12px; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.page { max-width: 800px; margin: 0 auto; padding: 20px 22px 24px; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+::selection { color: var(--ink); background: var(--selection); }
+p, h1, h2, h3, ul { margin: 0; }
+p + p { margin-top: 10px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+.identity { display: flex; align-items: center; gap: 10px; }
+.identity-text { display: flex; flex-direction: column; gap: 3px; }
+.portrait { display: block; width: 52px; height: 52px; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
+.site-name { font-size: 26px; line-height: 1.2; font-weight: 650; letter-spacing: -.6px; }
+.site-name a { color: var(--ink); text-decoration: none; }
+.domain { color: var(--muted); font: 11px var(--mono); }
+.header-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+nav { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.theme-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 3px 7px; border: 1px solid var(--muted); border-radius: 3px; color: var(--ink); background: var(--paper); font: inherit; font-size: 12px; line-height: 1.4; cursor: pointer; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle::before { content: ""; width: 8px; height: 8px; border: 1px solid currentColor; border-radius: 50%; }
+.theme-toggle[aria-pressed="true"]::before { background: currentColor; }
+.theme-toggle:hover { border-color: var(--ink); }
+.section { margin-top: 18px; }
+.section + .section { padding-top: 14px; border-top: 1px solid var(--line); }
+h2 { font-size: 17px; line-height: 1.35; font-weight: 650; margin-bottom: 8px; }
+h3 { font-size: 15px; line-height: 1.4; font-weight: 650; margin: 14px 0 5px; }
+.question h3 { margin-top: 0; }
+.question + .question { margin-top: 14px; }
+ul { padding-left: 20px; }
+li + li { margin-top: 7px; }
+time { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-top: 20px; border-top: 1px solid var(--line); padding-top: 10px; color: var(--muted); font: 11px/1.5 var(--mono); }
+.site-footer div > span { margin: 0 4px; }
+.skip-link { position: absolute; top: -100px; left: 12px; padding: 6px 12px; background: var(--paper); z-index: 2; }
+.skip-link:focus { top: 8px; }
+.not-found { padding: 20px 0 30px; }
+.not-found h1 { font-size: 26px; margin-bottom: 8px; }
+@media (max-width: 540px) {
+  .page { padding: 14px 16px 20px; }
+  .identity { width: 100%; }
+  .site-header { gap: 8px; }
+  .site-name { font-size: 25px; }
+  li { overflow-wrap: anywhere; }
+  .domain { font-size: 10px; }
+}
+@media print {
+  :root, :root[data-theme] {
+    color-scheme: light;
+    --paper: #fff;
+    --ink: #202b35;
+    --muted: #586672;
+    --line: #dce2e7;
+    --link: #1554a0;
+    --selection: #dfebf7;
+  }
+  body { font-size: 11pt; }
+  .page { padding: 0; max-width: none; }
+  .header-actions, .site-footer, .skip-link, .domain { display: none; }
+  .section { break-inside: avoid; }
+  a { color: inherit; }
+}
