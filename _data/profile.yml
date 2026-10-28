@@ -9,7 +9,7 @@ about:
   - >-
     I’m **Co-founder and CTO** of **[Cyfrin](https://www.cyfrin.io/)**, currently focused on building **[Cyfrin’s Risk team](https://www.cyfrin.io/services/risk)** and **expanding Cyfrin’s suite of professional services** to help institutions bring their customers and assets onchain safely and responsibly.
   - >-
-    My motivation and work center around **earning legitimacy** for the industry. I wrote about this in *[The Cyfrin Mission](https://medium.com/cyfrin/the-cyfrin-mission-50331b318e67)* in 2023. This primarily involves growing teams of talented experts, building useful things, and advising on security, economic, technical, and counterparty risks so people and institutions can make informed decisions.
+    My motivation and work center around **earning legitimacy** for the industry. I wrote about this in *[The Cyfrin Mission](https://medium.com/cyfrin/the-cyfrin-mission-50331b318e67)* in 2023. That motivation has shaped my work: growing teams of talented experts, building useful things, and advising on security, economic, technical, and counterparty risks so people and institutions can make informed decisions.
 hats:
   - >-
     **Build teams and services.** I built, managed, and grew Cyfrin’s security team and security audit service. It is now considered one of the few tier 1 security audit firms in the industry.
@@ -26,9 +26,9 @@ questions:
   - question: Can you help with protocol or smart-contract design?
     answer: >-
       Yes. I’ve worked on oracle integrations, automation, cross-chain systems, intents, RFQs, access control, multisig operations, stablecoin payments, and more. I can help design the system, work through its trust assumptions and failure modes, and take it through implementation, security review, and risk advisory.
-  - question: What about audits and security tooling?
+  - question: How do I get a security audit?
     answer: >-
-      I can help scope a security review and connect you with our industry-leading security experts at [Cyfrin](https://www.cyfrin.io/). If you’re building smart contracts, operating an onchain protocol, handling multisig signing workflows, or building tools to interact with blockchains, I’m happy to talk through what you need.
+      Reach out. I can help scope a security review and connect you with our industry-leading security experts at [Cyfrin](https://www.cyfrin.io/). If you’re building smart contracts, operating an onchain protocol, handling multisig signing workflows, or building tools to interact with blockchains, I’m happy to talk through what you need.
 topics:
   - Onchain risk
   - Economic risk
